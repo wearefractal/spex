@@ -1,0 +1,29 @@
+{
+   "name":"spex",
+   "description":"BDD-inspired specifications",
+   "version":"0.0.1",
+   "homepage":"http://github.com/wearefractal/spex",
+   "repository":"git://github.com/wearefractal/gwan",
+   "author":"Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
+   "main":"./index",
+   "bin":{
+      "gwan":"./bin/cli.coffee"
+   },
+
+   "dependencies":{
+      "commando":"*",
+      "node-log":"*",
+      "should":"*",
+      "async":"*"
+   },
+   "engines":{
+      "node":">= 0.4.0"
+   },
+   "licenses":[
+      {
+         "type":"MIT",
+         "url":"http://github.com/GITHUB_PATH/APP/raw/master/LICENSE"
+      }
+   ]
+}
+
