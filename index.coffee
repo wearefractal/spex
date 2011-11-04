@@ -1,4 +1,4 @@
 
 module.exports =
-  spec: require './spec'
+  spex: require './node_modules/spex/'
 

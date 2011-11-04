@@ -3,9 +3,8 @@
    "description":"BDD-inspired specifications",
    "version":"0.0.1",
    "homepage":"http://github.com/wearefractal/spex",
-   "repository":"git://github.com/wearefractal/gwan",
+   "repository":"git://github.com/wearefractal/spex",
    "author":"Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
-   "main":"./index",
    "bin":{
       "gwan":"./bin/cli.coffee"
    },
