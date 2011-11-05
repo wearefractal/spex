@@ -1,28 +1,17 @@
-```
-   ____  _      ______  ____ 
-  / __ `/ | /| / / __ `/ __ \
- / /_/ /| |/ |/ / /_/ / / / /
- \__, / |__/|__/\__,_/_/ /_/ 
-/____/    
-
-```
+Spex
 
 ###Simple BDD-inspired testing for NodeJS
 
 
-Who _**gwan**_ test the champion sound? 
-
-![huhuhuhu](http://i.imgur.com/OLZkS.jpg) 
-
 ## Installation
-    
+
 To install **gwan**, use [npm](http://github.com/isaacs/npm):
 
-    $ npm install -g gwan
+    $ npm install -g spex
 
 ## Usage
 
-See [the example tests](https://github.com/wearefractal/gwan/tree/master/test)
+See [the example tests](https://github.com/wearefractal/spex/tree/master/specs)
 
 ## LICENSE
 
@@ -48,3 +37,4 @@ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
 LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+

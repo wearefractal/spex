@@ -13,7 +13,8 @@
       "commando":"*",
       "node-log":"*",
       "should":"*",
-      "async":"*"
+      "async":"*",
+      "colors":"*"
    },
    "engines":{
       "node":">= 0.4.0"
