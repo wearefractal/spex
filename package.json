@@ -6,7 +6,7 @@
    "repository":"git://github.com/wearefractal/spex",
    "author":"Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
    "bin":{
-      "gwan":"./bin/cli.coffee"
+      "spex":"./bin/cli.coffee"
    },
 
    "dependencies":{
