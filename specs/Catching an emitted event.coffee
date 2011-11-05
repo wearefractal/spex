@@ -8,7 +8,7 @@
 
 >> When a 'foo' event is emitted
 
-  ee.emit 'foo', (bar) =>
+  ee.emit 'foo', (bar) ->
 
 >> Then bar should equal 'bar'
 
