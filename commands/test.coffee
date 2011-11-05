@@ -10,6 +10,5 @@ report = require('spex').load 'services.report'
 exports.exe = (cmd, args) ->
 
   specs = readFromDir './specs' # TODO: support more options for spec reading
-  console.log specs
-#  report specs
+  report specs
 
