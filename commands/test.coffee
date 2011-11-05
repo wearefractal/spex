@@ -6,13 +6,8 @@ require '../rzr/slice'
 # $ spex run - Runs all tests in ./specs/
 # TODO: support selective test running
 
-foo = -> _.new()
-
-foo()
-
-
 exports.exe = (cmd, args) ->
 
-
 #  spex.report spex.readFromDir 'specs' # TODO: support more options for spec reading
+  dump spex.readFromDir './specs' # TODO: support more options for spec reading
 
