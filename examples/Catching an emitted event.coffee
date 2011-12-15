@@ -3,8 +3,8 @@
 
   EventEmitter = require('events').EventEmitter
   ee = new EventEmitter
-  ee.on 'foo', (done) ->
-    done?('bar')
+  ee.on 'foo', (next) ->
+    next?('bar')
 
 >> When a 'foo' event is emitted
 

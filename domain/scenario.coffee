@@ -4,17 +4,6 @@ should = require 'should'
 async = require 'async'
 util = require 'util'; dump = (obj) -> log.info util.inspect(obj)
 
-# a Scenario consists of an annotation and a code block. For example:
-# >> Given an EventEmitter with a listener for 'foo' events
-# EventEmitter = require('events').EventEmitter
-#  ee = new EventEmitter
-#  ee.on 'foo', (done) ->
-#    done?('bar')
-
-class Scenario
-  status: 'notrun'
-  constructor: (@name, @code) ->
-
 # a **Feature** is something important that happens in your system
 # a feature consists of scenarios which in turn consist of a description & block of code
 

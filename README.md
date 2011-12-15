@@ -5,7 +5,7 @@ Spex
 
 ## Installation
 
-To install **gwan**, use [npm](http://github.com/isaacs/npm):
+To install **spex**, use [npm](http://github.com/isaacs/npm):
 
     $ npm install -g spex
 
