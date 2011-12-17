@@ -1,22 +1,15 @@
-_ = require 'slice'
+_ = require('slice') __dirname
 boxy = _.load 'boxy'
+SpexSandbox = _.load 'sandbox.agent'
 buildTest = _.load 'specifications.buildTest'
 
 runSpec = (spec, next) ->
 
-  sandbox = 
-    spex: spec
-  
-  boxy.exe (buildTest spec), sandbox, (result) ->
+  sandbox =
+    spex: new SpexSandbox spec, next
+    should: require 'should'    
 
-    spec = result.sandbox.spex
-    
-    if result.status is 'ok'
-      spec.status = 'pass'
-      next spec
-    else
-      spec.status = 'fail'      
-      spec.fail error.spexScenarioId, error
+  boxy.exe (buildTest @spec), sandbox
       
 
 module.exports = runSpec
