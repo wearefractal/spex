@@ -1,26 +1,15 @@
+_ = require('slice') __dirname
+allScenariosPass = _.load 'sandbox.allScenariosPass'
+
 class SandboxAgent    
 
   constructor: (@spec, @next) ->
-
-  pass: (scenarioId) -> 
-    @spec.scenarios[scenarioId] = 'pass'
-    @checkIfAllPassing()       
-
-  fail: (scenarioId, error) ->
-    @spec.status = 'fail'
-    @spec.scenarios[scenarioId].status = 'fail'
-    @spec.scenarios[scenarioId].error = error
-    @next spec
-
-  checkIfAllPassing: ->
-    if @allPassing()
+  
+  pass: (id) -> 
+    @spec.scenarios[id].status = 'pass'
+    if allScenariosPass @spec.scenarios
       @spec.status = 'pass'
-      @next spec
-      
-  allPassing: ->
-    for scenario in @spec.scenarios
-      if scenario.status != 'pass' then return false
-    return true
-
+      @next @spec
+     
 
 module.exports = SandboxAgent

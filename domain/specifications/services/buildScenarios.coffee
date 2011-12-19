@@ -1,14 +1,21 @@
-_ = require 'slice'
-parsimony = _.load 'parsimony'
-Scenario = _.load 'specifications.Scenario'
+_ = require('slice') __dirname
+tater = _.load 'tater'
+Scenario = _.load 'scenarios.Scenario'
 
 buildScenarios = (specDSL, next) ->
 
-  # generate AST of annotations and code blocks
-  parsimony.parse specDSL, (AST) ->
+  # TODO factor to config file
+  defaultDelim = "#>>"
 
-    next AST.map (block, index) -> 
-      new Scenario index, block.annotation, block.code, block.leadspace
-
+  # generate annotated codeblocks with tater
+  tater.parse specDSL, defaultDelim, (scenarios) ->
+    # map codeblocks to Scenarios
+    next scenarios.map (scenario, index) -> 
+      new Scenario
+        id: index
+        name: scenario.annotation
+        code: scenario.code
+        leadspace: scenario.leadspace
+      
 
 module.exports = buildScenarios

@@ -1,18 +1,27 @@
 #>> Setup
 
-should = require 'should'
+_ = require('slice') __dirname
+require 'should'
+
+buildScenarios = _.load 'specifications.buildScenarios'
+Scenario = _.load 'scenarios.Scenario'
 
 #>> Given a some spec DSL
 
 dsl = 
-'''#>> Given some dsl code\nfoo = "foo"\n>> Then Bar is bar\nbar = "bar"'''
+  '''
+  #>> Given some dsl code
+    foo = "foo" 
+  #>> Then Bar is bar
+    bar =  "bar"
+  '''
 
 #>> When I pass *buildScenarios* the DSL code
 
-scenarios = buildScenarios dsl
+buildScenarios dsl, (scenarios) ->
 
 #>> Then
 
-scenarios.length.should.equal 2 # and
-scenario.should.be.an.instanceof Scenario for scenario in scenarios
+  scenarios.length.should.equal 2 # and
+  scenario.should.be.an.instanceof Scenario for scenario in scenarios
 

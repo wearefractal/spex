@@ -6,7 +6,7 @@
    "repository":"git://github.com/wearefractal/spex",
    "author":"Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
    "bin":{
-      "spex":"./bin/cli.coffee"
+      "spex":"./domain/spex.agent.coffee"
    },
 
    "dependencies":{
@@ -14,7 +14,8 @@
       "should":"*",
       "async":"*",
       "slice":"*",
-      "spex-util":"*"
+      "spex-util":"*",
+      "tater":"*"
    },
    "engines":{
       "node":">= 0.4.0"

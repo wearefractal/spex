@@ -1,9 +1,10 @@
 #>> Setup
 
 _ = require('slice') __dirname
+should = require 'should'
+SpexSandbox = require '../sandbox.agent'
 Spec = _.load 'specifications.Spec'
 Scenario = _.load 'scenarios.Scenario'
-runSpec = _.load 'specifications.runSpec'
 
 #>> Given a Spec
 
@@ -17,7 +18,11 @@ code =
     foo.should.equal 'bar'
   '''
 
-mySpec = new Spec 'assignment test', code, true
+mySpec = new Spec 
+  name: 'assignment test'
+  specDSL: code
+  isCoffee: true
+
 mySpec.scenarios = []
 mySpec.scenarios.push new Scenario 
   id: 0
@@ -34,21 +39,20 @@ mySpec.scenarios.push new Scenario
 mySpec.scenarios.push new Scenario 
   id: 2
   name: 'Then'
-  code: "foo.should.equal 'bar'"
+  code: 'foo = "bar"'
   leadspace: '  '
 
+#>> When I create a new sandbox
 
-#>> Then
+sb = new SpexSandbox mySpec, (spec) ->
 
-mySpec.status.should.equal 'notrun'
+#>> Then the space should be passing 
 
-#>> When I run the spec
-
-runSpec mySpec, (spec) ->
-
-#>> Then
-    
-  #console.log spec
   spec.status.should.equal 'pass'
 
+#>> When I call pass on all scenarios
+
+sb.pass 0
+sb.pass 1
+sb.pass 2
 
