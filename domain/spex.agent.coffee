@@ -1,6 +1,9 @@
-fs = require 'fs'
+_ = require('slice') __dirname
 
-file = fs.readfile "../../examples/Using an Array as a queue"
+Spex = 
 
-spec = new Spec 
-  ...
+  runSpec:  _.load 'specifications.runSpec'
+  runSpecs: _.load 'specifications.runSpecs'
+
+
+module.exports = Spex
