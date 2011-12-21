@@ -13,9 +13,10 @@ code =
   #>> Given foo
     foo = 'foo'
   #>> When I change the value of foo
-    foo = 'bar'
-  #>> Then
-    foo.should.equal 'bar'
+    setTimeout (->    
+      foo = 'bar'
+      foo.should.equal 'bar'
+    ), 1000
   '''
 
 mySpec = new Spec 
@@ -34,5 +35,4 @@ runSpec mySpec, (err, spec) ->
 #>> Then
     
   spec.status.should.equal 'pass'
-
 

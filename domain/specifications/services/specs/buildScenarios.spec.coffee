@@ -1,10 +1,10 @@
 #>> Setup
 
-_ = require('slice') __dirname
 require 'should'
+_ = require('slice') __dirname
 
 buildScenarios = _.load 'specifications.buildScenarios'
-Scenario = _.load 'scenarios.Scenario'
+Scenario       = _.load 'scenarios.Scenario'
 
 #>> Given a some spec DSL
 
@@ -22,6 +22,6 @@ buildScenarios dsl, (scenarios) ->
 
 #>> Then
 
-  scenarios.length.should.equal 2 # and
+  scenarios.length.should.equal 2
   scenario.should.be.an.instanceof Scenario for scenario in scenarios
 
