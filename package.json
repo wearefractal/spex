@@ -5,9 +5,7 @@
    "homepage":"http://github.com/wearefractal/spex",
    "repository":"git://github.com/wearefractal/spex",
    "author":"Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
-   "bin":{
-      "spex":"./domain/spex.agent.coffee"
-   },
+   "main":"./domain/spex.agent.coffee",
 
    "dependencies":{
       "node-log":"*",

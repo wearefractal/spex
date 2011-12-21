@@ -9,12 +9,14 @@ buildTest      = _.load 'specifications.buildTest'
 runSpec = (spec, next) ->
   
   buildScenarios spec.specDSL, (scenarios) ->
+
     spec.scenarios = scenarios  
     spexDSL = new SpexSandbox spec, (spec) -> next null, spec
     sandbox =
       spex: spexDSL 
 
     buildTest spec.scenarios, (testCode) ->
+
       
       boxy.exe testCode, sandbox, (result) ->
         #fail

@@ -5,5 +5,7 @@ Spex =
   runSpec:  _.load 'specifications.runSpec'
   runSpecs: _.load 'specifications.runSpecs'
 
+  Spec: _.load 'specifications.Spec'
+
 
 module.exports = Spex

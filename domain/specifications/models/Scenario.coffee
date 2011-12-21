@@ -3,6 +3,7 @@
 
 class Scenario
   constructor: ({@id , @name, @code, @leadspace}) ->
+    @status = 'notrun'
 
 
 module.exports = Scenario

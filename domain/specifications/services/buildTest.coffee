@@ -16,7 +16,7 @@ buildTest = (scenarios, next) ->
       "#{ nextSpace }sandbox.spex.pass #{ scenario.id }\n"
 
   testCode = scenarios.join ''
-
+  
   # bare strips the default closure container
   next (coffee.compile testCode, {bare: true}).trim()
 
