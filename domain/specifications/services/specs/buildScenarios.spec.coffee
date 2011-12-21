@@ -4,7 +4,7 @@ require 'should'
 _ = require('slice') __dirname
 
 buildScenarios = _.load 'specifications.buildScenarios'
-Scenario       = _.load 'scenarios.Scenario'
+Scenario       = _.load 'specifications.Scenario'
 
 #>> Given a some spec DSL
 

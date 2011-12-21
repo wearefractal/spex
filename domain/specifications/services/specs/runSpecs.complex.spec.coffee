@@ -2,9 +2,8 @@
 
 _ = require('slice') __dirname
 
-Spec           = _.load 'specifications.Spec'
-Scenario       = _.load 'scenarios.Scenario'
-runSpecs        = _.load 'specifications.runSpecs'
+Spec     = _.load 'specifications.Spec'
+runSpecs = _.load 'specifications.runSpecs'
 
 #>> Given some Specs
 

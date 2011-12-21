@@ -3,7 +3,7 @@
 _ = require('slice') __dirname
 require 'should'
 buildTest = _.load 'specifications.buildTest'
-Scenario = _.load 'scenarios.Scenario'
+Scenario = _.load 'specifications.Scenario'
 
 #>> Given some Scenarios
 
