@@ -2,12 +2,14 @@ Spex
 
 ###Simple BDD-inspired testing for NodeJS
 
+this repo and the 'spex' npm package is the spex library
+use the [spex-cli](https://github.com/wearefractal/spex-cli) to run specifications locally
 
 ## Installation
 
-To install **spex**, use [npm](http://github.com/isaacs/npm):
+To install the **spex** lib, use [npm](http://github.com/isaacs/npm):
 
-    $ npm install -g spex
+    $ npm install spex
 
 ## Usage
 
