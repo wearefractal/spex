@@ -8,6 +8,7 @@
    "main":"./domain/spex.agent.coffee",
 
    "dependencies":{
+      "coffee-script":"*",
       "node-log":"*",
       "should":"*",
       "async":"*",
