@@ -7,3 +7,4 @@ spex = require '../spex.agent'
 
 spex.should.have.property 'runSpec'
 spex.should.have.property 'runSpecs'
+spex.should.have.property 'Spec'
