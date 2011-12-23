@@ -1,7 +1,5 @@
-_ = require('slice') __dirname
-
-tater    = _.load 'tater'
-Scenario = _.load 'specifications.Scenario'
+tater    = require 'tater'
+Scenario = require '../models/Scenario'
 
 buildScenarios = (specDSL, next) ->
 

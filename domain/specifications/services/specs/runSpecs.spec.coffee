@@ -1,9 +1,8 @@
 #>> Setup
 
-_ = require('slice') __dirname
-
-Spec     = _.load 'specifications.Spec'
-runSpecs = _.load 'specifications.runSpecs'
+require 'should'
+Spec     = require '../../models/Spec'
+runSpecs = require '../runSpecs'
 
 #>> Given some Specs
 
@@ -42,7 +41,7 @@ specs.push mySpec2 = new Spec
 #>> When I run the specs
 
 
-runSpecs specs, (specs) ->
+runSpecs specs, (err, specs) ->
 
   specs[0].name.should.equal "assignment test"
   specs[0].status.should.equal 'pass'

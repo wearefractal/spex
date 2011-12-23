@@ -1,5 +1,4 @@
-_ = require('slice') __dirname
-allScenariosPass = _.load 'sandbox.allScenariosPass'
+allScenariosPass = require './services/allScenariosPass'
 
 class SandboxAgent    
 

@@ -1,9 +1,8 @@
 #>> Setup
 
-_ = require('slice') __dirname
 require 'should'
-buildTest = _.load 'specifications.buildTest'
-Scenario = _.load 'specifications.Scenario'
+buildTest = require '../buildTest'
+Scenario  = require '../../models/Scenario'
 
 #>> Given some Scenarios
 

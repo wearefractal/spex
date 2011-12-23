@@ -1,9 +1,8 @@
 #>> Setup
 
-_ = require('slice') __dirname
-
-Spec    = _.load 'specifications.Spec'
-runSpec = _.load 'specifications.runSpec'
+require 'should'
+Spec    = require '../../models/Spec'
+runSpec = require '../runSpec'
 
 #>> Given a Spec
 

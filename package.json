@@ -1,7 +1,7 @@
 {
    "name":"spex",
    "description":"BDD-inspired specifications",
-   "version":"0.0.3",
+   "version":"0.0.5",
    "homepage":"http://github.com/wearefractal/spex",
    "repository":"git://github.com/wearefractal/spex",
    "author":"Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
@@ -11,8 +11,7 @@
       "node-log":"*",
       "should":"*",
       "async":"*",
-      "slice":"*",
-      "spex-util":"*",
+      "slice":">= 0.0.3",
       "tater":"*"
    },
    "engines":{

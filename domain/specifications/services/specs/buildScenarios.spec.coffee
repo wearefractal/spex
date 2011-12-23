@@ -1,10 +1,8 @@
 #>> Setup
 
 require 'should'
-_ = require('slice') __dirname
-
-buildScenarios = _.load 'specifications.buildScenarios'
-Scenario       = _.load 'specifications.Scenario'
+buildScenarios = require '../buildScenarios'
+Scenario       = require '../../models/Scenario'
 
 #>> Given a some spec DSL
 

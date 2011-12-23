@@ -1,11 +1,11 @@
-_ = require('slice') __dirname
-
-async   = _.load 'async'
-runSpec = _.load 'specifications.runSpec'
+async   = require 'async'
+runSpec = require './runSpec'
 
 runSpecs = (specs, next) ->
-    
+
   async.map specs, runSpec, (err, specs) -> 
-    next specs
+    if err? then next err
+    else 
+    next null, specs
 
 module.exports = runSpecs

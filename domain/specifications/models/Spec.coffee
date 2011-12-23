@@ -1,5 +1,5 @@
 class Spec
-  constructor: ({@name, @specDSL, @isCoffee}) ->
+  constructor: ({@name, @specDSL, @isCoffee, @specDir}) ->
     @status = 'notrun'
     @scenarios = []
 

@@ -1,10 +1,9 @@
 #>> Setup
 
-_ = require('slice') __dirname
-should = require 'should'
+require 'should'
 SpexSandbox = require '../sandbox.agent'
-Spec = _.load 'specifications.Spec'
-Scenario = _.load 'scenarios.Scenario'
+Spec        = require '../../specifications/models/Spec'
+Scenario    = require '../../specifications/models/Scenario'
 
 #>> Given a Spec
 
